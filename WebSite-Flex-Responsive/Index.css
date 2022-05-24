@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #24252A;;
+}
+
+div#dropDownArea {
+	display: none;
+}
+
+li, a, button, h2 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2% 2%;
+	transition: all 0.3s ease 0s;
+}
+
+header h2 {
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+header h2:hover {
+	color: #0088a9;
+}
+
+nav#navBar ul, div#dropDown ul {
+	list-style-type: none;
+}
+
+nav#navBar ul li, div#dropDown ul li {
+	display: inline-block;
+	flex-direction: row;
+	padding: 0px 20px;
+}
+
+nav#navBar ul li a, div#dropDown ul li a {
+	display: block;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+}
+
+nav#navBar ul li a:hover ,div#dropDown ul li a:hover {
+	color: #0088a9;
+}
+
+header button {
+	padding: 9px 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+	background-color: black;
+}
+
+
+div.columnChildBody {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+div.columnChildBody img {
+	width: 20%;
+	padding: 5px;
+}
+
+@media screen and (max-width: 650px){
+	div.columnChildBody img {
+		width: 33.3%;
+	}
+
+	nav#navBar {
+		display: none;
+	}
+
+	div#dropDownArea {
+		display: inline-block;
+		position: relative;
+		width: fit-content;
+	}
+
+	div#dropDown {
+		display: none;
+		position: absolute;
+		z-index: 1;
+	}
+
+	div#dropDownArea:hover div#dropDown   {
+		display: block;
+	}
+
+
+
+}
